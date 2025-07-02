@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;                 /* enables flexbox */
+  flex-direction: row;          /* row | column | row-reverse */
+  flex-wrap: wrap;              /* wrap items to next line if needed */
+  gap: 1rem;                    /* space between items */
+  justify-content: center;      /* horizontal alignment */
+  align-items:stretch;         /* vertical alignment of items */
+  align-content: flex-start;    /* vertical alignment of wrapped rows */
+  min-height: 300px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  padding: 1rem;
+}
+
+/* Base style for all items */
+.item {
+  background: lightblue;
+  border: 2px solid #0077cc;
+  padding: 1rem;
+  flex: 1 2 100px;              /* grow | shrink | basis */
+  text-align: center;
+  min-width: 100px;
+}
+
+/* Individual item customization */
+.item3 {
+  flex: 1 1 100px; 
+  align-self: center;           /* overrides align-items just for this one */
+  order: -1;                    /* moves item 3 to appear first */
+}

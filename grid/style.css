@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  grid-template-rows: auto auto;         /* automatic row height */
+  gap: 1rem;                              /* spacing between cells */
+  justify-items: center;                 /* horizontal alignment of items */
+  align-items: center;                   /* vertical alignment of items */
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 2px solid #ccc;
+}
+
+/* Base style for items */
+.item {
+  background: lightgreen;
+  border: 2px solid #3a3;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Advanced positioning */
+.item1 {
+  grid-column: 1 / 3; /* spans columns 1 and 2 */
+}
+.item5 {
+  grid-row: 2;        /* place in second row */
+  order: -1;          /* visually comes earlier */
+}
+.item6 {
+  grid-area: 2 / 3 / 3 / 4; /* shorthand: row-start / col-start / row-end / col-end */
+}
