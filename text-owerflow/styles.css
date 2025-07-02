@@ -1,0 +1,25 @@
+.box {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: aqua;
+  padding: 20px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 5px solid #f70000;
+
+  white-space: nowrap; 
+}
+
+.box2 {
+  width: 300px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+}
