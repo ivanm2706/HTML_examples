@@ -1,0 +1,9 @@
+.box {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.box:target {
+  max-height: 200px;
+}

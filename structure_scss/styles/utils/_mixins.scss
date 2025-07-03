@@ -1,0 +1,48 @@
+@import './var';
+
+// ----------------------------
+// for media-query
+// ----------------------------
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $desktop) { @content; }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//  use
+// 
+// .wrapper {
+//   @include flex-center;
+
+//   @include respond(tablet) {
+//     flex-direction: column;
+//   }
+// }
+
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// how to use
+// .button {
+//   @include button-style(#3498db, white);
+// }
